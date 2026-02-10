@@ -29,4 +29,4 @@ jobs:
           if command -v pytest >/dev/null 2>&1; then pytest -q; else echo "No tests configured"; fi
 
       - name: Example deploy step (placeholder)
-        run: echo "Run your deployment or custom scripts here"
+        run: python3 run app.py
