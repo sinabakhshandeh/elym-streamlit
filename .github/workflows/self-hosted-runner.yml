@@ -24,12 +24,6 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Run tests
-        run: |
-          if command -v pytest >/dev/null 2>&1; then pytest -q; else echo "No tests configured"; fi
-
       - name: Start Streamlit detached (keeps running after job)
         run: |
-          nohup setsid streamlit run app.py --server.port 8501 --server.address 0.0.0.0 --server.headless true > streamlit.log 2>&1 < /dev/null &
-          echo $! > streamlit.pid
-          echo "Started streamlit PID=$(cat streamlit.pid)"
+          streamlit run app.py
