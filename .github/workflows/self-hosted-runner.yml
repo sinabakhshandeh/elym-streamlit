@@ -28,5 +28,13 @@ jobs:
         run: |
           if command -v pytest >/dev/null 2>&1; then pytest -q; else echo "No tests configured"; fi
 
-      - name: Example deploy step (placeholder)
-        run: streamlit run app.py
+      - name: Start Streamlit detached (keeps running after job)
+        run: |
+          nohup setsid streamlit run app.py --server.port 8501 --server.address 0.0.0.0 --server.headless true > streamlit.log 2>&1 < /dev/null &
+          echo $! > streamlit.pid
+          echo "Started streamlit PID=$(cat streamlit.pid)"
+
+      - name: Verify Streamlit started
+        run: |
+          sleep 3
+          if curl -sS http://localhost:8501 >/dev/null 2>&1; then echo "Streamlit reachable"; else echo "Warning: Streamlit not reachable"; fi
