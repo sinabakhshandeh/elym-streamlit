@@ -1,7 +1,14 @@
 import streamlit as st
 import custom_style as cs
+from PIL import Image
 
 st.write("# Power-to-X in Germany")
+
+image_caption = "Image source: Birett, F., Goppel, G., & Toperngpong, F. (2024). PtX - Die Zukunft der Energie im Wasserstoffatlas (Version 1). Zenodo. https://doi.org/10.5281/zenodo.13960175"
+image_path = Image.open("files/ptx.jpg")
+st.image(image_path, caption=image_caption, width="content")
+# image_url = "https://zenodo.org/records/13960175/files/PTX%20_%20Die%20Zukunft%20der%20Energie%20groß.jpg?download=1"
+# st.image(image_url, caption=image_caption, width="content")
 
 st.write("## What is Power-to-X?")
 st.write("""**Power-to-X (PtX)** technologies convert surplus renewable electricity into 
@@ -18,7 +25,7 @@ on imported fossil fuels and supporting the integration of variable renewable
 energy sources (wind and solar).""")
 
 st.write("### Status Review & Analysis of the Implementation-Ambition Gap (2021-2024)")
-cs.set_expander_bg_color("#033159")
+
 with st.expander("Planned Capacity", expanded=True):
     st.write("All PtX projects announced between 2021 and 2024")
     st.metric("Capacity", "3.38 GW", chart_type="area")
