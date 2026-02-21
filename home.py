@@ -1,5 +1,4 @@
 import streamlit as st
-import custom_style as cs
 from PIL import Image
 
 Image.MAX_IMAGE_PIXELS = 500_000_000  
