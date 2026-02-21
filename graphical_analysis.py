@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 import streamlit as st
-import custom_style as cs
 
 
 # Download and load Germany NUTS1 shapefile
@@ -14,7 +13,7 @@ import custom_style as cs
 def load_germany_nuts1():
     try:
         # Try to load from online source
-        gdf = gpd.read_file('map.json')
+        gdf = gpd.read_file('data/map.json')
         # Filter for Germany
         gdf = gdf[gdf['CNTR_CODE'] == 'DE'].copy()
         return gdf
@@ -37,9 +36,6 @@ with col2:
     st.metric("Average per State", f"{df['Number of announced projects'].mean():.1f}")
 with col3:
     st.metric("Max Projects (State)", f"{df.loc[df['Number of announced projects'].idxmax(), 'State name']}")
-
-
-
 
 with st.spinner("Loading map data..."):
     germany_nuts1 = load_germany_nuts1()
