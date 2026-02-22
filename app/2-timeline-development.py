@@ -15,7 +15,7 @@ st.write("""The 2023 cohort is larger: 85 projects are analysed, with 34 coming 
 
 st.write("""For 2024, 85 projects are again tracked, with 30 appearing only in the 2024 dataset; here 66.7% of these 30 projects reach implementation stages (FID, under construction, or operational). At the capacity level, 2024 stands out: 380.76 MW is realised, corresponding to 61.3% of that year’s planned 621.1 MW capacity and about 22.8% of the 1.67 GW/year required for the 2030 goal.""")
 
-line_chart = pygal.Line()
+line_chart = pygal.Line(style=pygal.style.TurquoiseStyle)
 line_chart.title = 'Annual Capacity - Ambition vs Implementation (2021-2024)'
 line_chart.x_labels = [2021, 2022, 2023, 2024]
 line_chart.add('Planned cap. GW', [0.08549, 0.31729, 0.32927, 0.62110])
@@ -56,7 +56,7 @@ with st.expander("2024 Projects", expanded=True):
 st.write("## Implementation rate")
 st.write("Base on projects counts and defines an implementation rate as the sahre of projects thah have moved into implementation stages")
 
-bar_chart = pygal.Bar()
+bar_chart = pygal.Bar(style=pygal.style.TurquoiseStyle)
 bar_chart.title = 'Implementation rate evolution (in %)'
 bar_chart.x_labels = [2021, 2022, 2023, 2024]
 bar_chart.add('Implementation rate', [26.7, 85.7, 64.7, 66.7])

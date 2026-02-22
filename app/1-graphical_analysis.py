@@ -1,12 +1,28 @@
 
+import pygal
 import streamlit as st
 import pandas as pd
 import geopandas as gpd
 import matplotlib.pyplot as plt
-import seaborn as sns
 
 import streamlit as st
 
+plt.style.use('default')
+
+plt.rcParams.update({
+    'axes.facecolor': '#e0f7f7',
+    'figure.facecolor': '#ffffff',
+    'axes.edgecolor': '#008080',
+    'axes.labelcolor': '#006666',
+    'xtick.color': '#006666',
+    'ytick.color': '#006666',
+    'grid.color': '#b2dfdb',
+    'text.color': '#004c4c',
+    'lines.color': '#00bcd4',
+    'axes.prop_cycle': plt.cycler(color=[
+        '#00bcd4', '#009688', '#4dd0e1', '#00796b'
+    ])
+})
 
 # Download and load Germany NUTS1 shapefile
 @st.cache_data
@@ -40,7 +56,9 @@ with col3:
 with st.spinner("Loading map data..."):
     germany_nuts1 = load_germany_nuts1()
 
-if germany_nuts1 is not None:
+if germany_nuts1 is None:
+    st.error("Unable to load map data. Please check your internet connection or try again later.")
+else:
     # Merge the data with the geodataframe
     germany_nuts1 = germany_nuts1.merge(
         df[['Code', 'Number of announced projects', 'State name']], 
@@ -50,19 +68,16 @@ if germany_nuts1 is not None:
     )
     
     # Fill NaN values with 0 for regions without data
-    germany_nuts1['Number of announced projects'] = germany_nuts1['Number of announced projects'].fillna(0)
-    
-    # Create the map with seaborn styling
-    sns.set_style("whitegrid")
+    germany_nuts1['Number of announced projects'] = germany_nuts1[
+        'Number of announced projects'
+    ].fillna(0)
+
     fig, ax = plt.subplots(1, 1, figsize=(14, 16))
     
-    # Plot the choropleth
     germany_nuts1.plot(
         column='Number of announced projects',
         ax=ax,
         legend=True,
-        cmap='YlOrRd',
-        edgecolor='black',
         linewidth=0.5,
         legend_kwds={
             'label': "Number of Announced Projects",
@@ -72,7 +87,6 @@ if germany_nuts1 is not None:
         }
     )
     
-    # Add state labels
     for idx, row in germany_nuts1.iterrows():
         if pd.notna(row['State name']):
             centroid = row['geometry'].centroid
@@ -85,60 +99,22 @@ if germany_nuts1 is not None:
                 fontweight='bold',
                 bbox=dict(boxstyle='round,pad=0.3', facecolor='white', alpha=0.7, edgecolor='none')
             )
-    
+
     ax.set_title('Distribution of Announced Projects Across German NUTS1 Regions', 
                  fontsize=16, fontweight='bold', pad=20)
     ax.axis('off')
-    
-    # Display the map in Streamlit
+
     st.pyplot(fig)
-    
-    # Additional visualizations
-    st.subheader("Project Distribution - Bar Chart")
-    
-    fig2, ax2 = plt.subplots(figsize=(12, 6))
-    df_sorted = df.sort_values('Number of announced projects', ascending=True)
-    
-    sns.barplot(
-        data=df_sorted,
-        y='State name',
-        x='Number of announced projects',
-        palette='YlOrRd',
-        ax=ax2
-    )
-    
-    ax2.set_xlabel('Number of Announced Projects', fontsize=12, fontweight='bold')
-    ax2.set_ylabel('State', fontsize=12, fontweight='bold')
-    ax2.set_title('Projects by State (Sorted)', fontsize=14, fontweight='bold')
-    
-    # Add value labels on bars
-    for i, v in enumerate(df_sorted['Number of announced projects']):
-        ax2.text(v + 0.3, i, str(v), va='center', fontsize=10)
-    
-    st.pyplot(fig2)
-    
-else:
-    st.warning("Map could not be loaded. Showing data table and bar chart only.")
-    
-    # Show bar chart as alternative
-    st.subheader("Project Distribution - Bar Chart")
-    
-    fig, ax = plt.subplots(figsize=(12, 6))
-    df_sorted = df.sort_values('Number of announced projects', ascending=True)
-    
-    sns.barplot(
-        data=df_sorted,
-        y='State name',
-        x='Number of announced projects',
-        palette='YlOrRd',
-        ax=ax
-    )
-    
-    ax.set_xlabel('Number of Announced Projects', fontsize=12, fontweight='bold')
-    ax.set_ylabel('State', fontsize=12, fontweight='bold')
-    ax.set_title('Projects by State (Sorted)', fontsize=14, fontweight='bold')
-    
-    for i, v in enumerate(df_sorted['Number of announced projects']):
-        ax.text(v + 0.3, i, str(v), va='center', fontsize=10)
-    
-    st.pyplot(fig)
+
+df_sorted = df.sort_values('Number of announced projects', ascending=True)
+
+st.subheader("Project Distribution")
+
+bar_chart = pygal.HorizontalBar(style=pygal.style.TurquoiseStyle)
+bar_chart.title = 'Project Distribution by State'
+for idx, row in df_sorted.iterrows():
+    bar_chart.add(row['State name'], row['Number of announced projects'])
+bar_chart.render()
+
+rendered_bar_chart = bar_chart.render().decode('utf-8')
+st.components.v1.html(rendered_bar_chart, height=520)
