@@ -41,19 +41,6 @@ st.write(
     "Projects status defines six lifecycle stages: concept, feasibility, demo, FID, under construction, and operational."
 )
 
-# bar_chart = pygal.Bar()
-# bar_chart.title = 'Project Status Distribution by Year (2021-2024)'
-# bar_chart.x_labels = [2021, 2022, 2023, 2024]
-# bar_chart.add('Operational', [None, None, 0, 16.6,   25,   31, 36.4, 45.5, 46.3, 42.8, 37.1])
-# bar_chart.add('Under Construction',  [None, None, None, None, None, None,    0,  3.9, 10.8, 23.8, 35.3])
-# bar_chart.add('FID',      [85.8, 84.6, 84.7, 74.5,   66, 58.6, 54.7, 44.8, 36.2, 26.6, 20.1])
-# bar_chart.add('Feasibility Study',  [14.2, 15.4, 15.3,  8.9,    9, 10.4,  8.9,  5.8,  6.7,  6.8,  7.5])
-# bar_chart.add('DEMO',  [14.2, 15.4, 15.3,  8.9,    9, 10.4,  8.9,  5.8,  6.7,  6.8,  7.5])
-# bar_chart.add('Concept',  [14.2, 15.4, 15.3,  8.9,    9, 10.4,  8.9,  5.8,  6.7,  6.8,  7.5])
-# rendered_bar_chart = bar_chart.render().decode('utf-8')
-
-# st.components.v1.html(rendered_bar_chart, height=520)
-
 with st.expander("2021 Projects", expanded=True):
     st.write(
         "For 2021 projects, about 77.1% of announced capacity stays in feasibility; only a modest share reaches FID, construction, or operation."

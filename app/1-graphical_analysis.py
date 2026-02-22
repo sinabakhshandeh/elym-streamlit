@@ -24,13 +24,14 @@ plt.rcParams.update(
 )
 
 
-# Download and load Germany NUTS1 shapefile
 @st.cache_data
 def load_germany_nuts1():
+    """Load Germany NUTS1 shapefile from online source.
+    Returns:
+        gpd.GeoDataFrame: GeoDataFrame containing Germany NUTS1 geometries and attributes.
+    """
     try:
-        # Try to load from online source
         gdf = gpd.read_file("data/map.json")
-        # Filter for Germany
         gdf = gdf[gdf["CNTR_CODE"] == "DE"].copy()
         return gdf
     except Exception as e:
@@ -66,7 +67,6 @@ if germany_nuts1 is None:
         "Unable to load map data. Please check your internet connection or try again later."
     )
 else:
-    # Merge the data with the geodataframe
     germany_nuts1 = germany_nuts1.merge(
         df[["Code", "Number of announced projects", "State name"]],
         left_on="NUTS_ID",
@@ -74,7 +74,6 @@ else:
         how="left",
     )
 
-    # Fill NaN values with 0 for regions without data
     germany_nuts1["Number of announced projects"] = germany_nuts1[
         "Number of announced projects"
     ].fillna(0)

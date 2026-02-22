@@ -53,7 +53,6 @@ st.write(
     "Across all four years, hydrogen clearly dominates the PtX product portfolio, rising from about 63% of projects in 2021 to over 83% in 2024. Synfuels and methanol appear every year but remain secondary, while methane and “no defined product yet” signal pilot and experimental projects rather than large‑scale deployment."
 )
 
-
 st.write("## Cumulative product picture")
 st.write(
     "Cumulatively, almost four out of five PtX projects in Germany target hydrogen as their main product, with a smaller but persistent group exploring liquid e‑fuels, methanol, synthetic hydrocarbons and methane."
