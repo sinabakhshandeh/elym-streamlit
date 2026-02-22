@@ -8,6 +8,7 @@ pages = {
         st.Page("graphical_analysis.py", title="Geographic Analysis"),
         st.Page("timeline-development.py", title="Temporal Trends"),
         st.Page("technology.py", title="Technology and Product Analysis"),
+        st.Page("barriers-challanges.py", title="Barriers and Challenges"),
     ],
 }
 
