@@ -26,4 +26,4 @@ jobs:
 
       - name: Start Streamlit detached (keeps running after job)
         run: |
-          streamlit run app.py
+          nohup streamlit run app.py > streamlit.log 2>&1 &
