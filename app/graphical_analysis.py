@@ -13,7 +13,7 @@ import streamlit as st
 def load_germany_nuts1():
     try:
         # Try to load from online source
-        gdf = gpd.read_file('data/map.json')
+        gdf = gpd.read_file('app/data/map.json')
         # Filter for Germany
         gdf = gdf[gdf['CNTR_CODE'] == 'DE'].copy()
         return gdf
@@ -27,7 +27,7 @@ st.write("Spatial Distribution of PtX Projects Across Germany (2021-2024)")
 st.write("Analysis at NUTS 1 (Federal States) and NUTS 3 (District) levels reveals strong regional concentration and significant disparities in project development.")
 st.write("## Distribution of Announced Projects Across German NUTS1 Regions")
 
-df = pd.read_csv("data/dist-ptx-nut1.csv")
+df = pd.read_csv("app/data/dist-ptx-nut1.csv")
 
 col1, col2, col3 = st.columns(3)
 with col1:
