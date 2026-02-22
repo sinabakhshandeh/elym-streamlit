@@ -6,7 +6,7 @@ Image.MAX_IMAGE_PIXELS = 500_000_000
 st.write("# Power-to-X in Germany")
 
 image_caption = "Image source: Birett, F., Goppel, G., & Toperngpong, F. (2024). PtX - Die Zukunft der Energie im Wasserstoffatlas (Version 1). Zenodo. https://doi.org/10.5281/zenodo.13960175"
-image_path = Image.open("app/files/ptx.jpg")
+image_path = Image.open("files/ptx.jpg")
 st.image(image_path, caption=image_caption, width="content")
 # image_url = "https://zenodo.org/records/13960175/files/PTX%20_%20Die%20Zukunft%20der%20Energie%20groß.jpg?download=1"
 # st.image(image_url, caption=image_caption, width="content")
