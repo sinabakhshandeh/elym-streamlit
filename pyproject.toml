@@ -1,0 +1,15 @@
+# pyproject.toml
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors (PEP8)
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "UP",  # pyupgrade
+    "B",   # bugbear (common bugs)
+]
+ignore = ["E501"]  # ignore line length if using formatter
