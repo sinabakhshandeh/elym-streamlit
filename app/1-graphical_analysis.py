@@ -46,7 +46,7 @@ st.write(
 )
 st.write("## Distribution of Announced Projects Across German NUTS1 Regions")
 
-df = pd.read_csv("data/dist-ptx-nut1.csv")
+df = pd.read_csv("app/data/dist-ptx-nut1.csv")
 
 col1, col2, col3 = st.columns(3)
 with col1:
