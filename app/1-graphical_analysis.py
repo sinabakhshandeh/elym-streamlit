@@ -31,7 +31,7 @@ def load_germany_nuts1():
         gpd.GeoDataFrame: GeoDataFrame containing Germany NUTS1 geometries and attributes.
     """
     try:
-        gdf = gpd.read_file("data/map.json")
+        gdf = gpd.read_file("app/data/map.json")
         gdf = gdf[gdf["CNTR_CODE"] == "DE"].copy()
         return gdf
     except Exception as e:
