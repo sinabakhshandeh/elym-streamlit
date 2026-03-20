@@ -59,7 +59,7 @@ st.write(
 )
 
 pie_chart = pygal.Pie(style=pygal.style.TurquoiseStyle)
-pie_chart.title = "Browser usage in February 2012 (in %)"
+pie_chart.title = "Total distribution of product output from 2021 to 2024"
 pie_chart.add("H2", 77.8)
 pie_chart.add("Synfuels (liquid e‑fuels etc.)", 10.1)
 pie_chart.add("MeOH", 6.1)
