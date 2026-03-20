@@ -27,21 +27,26 @@ energy sources (wind and solar).""")
 
 st.write("### Status Review & Analysis of the Implementation-Ambition Gap (2021-2024)")
 
-with st.expander("Planned Capacity", expanded=True):
-    st.write("All PtX projects announced between 2021 and 2024")
-    st.metric("Capacity", "3.38 GW", chart_type="area")
-with st.expander("Operational Capacity", expanded=True):
-    st.write("Projects that are currently operational")
-    st.metric("Capacity", "0.44 GW")
-with st.expander("Ambition-Implementation Gap", expanded=True):
-    st.write("Difference between planned and operational capacity")
-    st.metric(
-        "Capacity",
-        "2.94 GW",
-        delta="-86.9%",
-        delta_color="off",
-        help="Significant gap between planned and operational capacity",
-    )
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    with st.expander("Planned Capacity", expanded=True):
+        st.write("All PtX projects announced between 2021 and 2024")
+        st.metric("Capacity", "3.38 GW", chart_type="area")
+with col2:
+    with st.expander("Operational Capacity", expanded=True):
+        st.write("Projects that are currently operational")
+        st.metric("Capacity", "0.44 GW")
+with col3:
+    with st.expander("Ambition-Impl. Gap", expanded=True):
+        st.write("Difference between planned and operational capacity")
+        st.metric(
+            "Capacity",
+            "2.94 GW",
+            delta="-86.9%",
+            delta_color="off",
+            help="Significant gap between planned and operational capacity",
+        )
 
 st.markdown("---")
 
