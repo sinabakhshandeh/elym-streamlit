@@ -125,10 +125,15 @@ df_sorted = df.sort_values("Number of announced projects", ascending=True)
 
 st.subheader("Project Distribution")
 
-bar_chart = pygal.HorizontalBar(style=pygal.style.TurquoiseStyle)
+bar_chart = pygal.HorizontalBar(
+    show_legend=False, print_labels=True, style=pygal.style.LightGreenStyle
+)
 bar_chart.title = "Project Distribution by State"
 for _, row in df_sorted.iterrows():
-    bar_chart.add(row["State name"], row["Number of announced projects"])
+    bar_chart.add(
+        row["State name"],
+        [{"value": row["Number of announced projects"], "label": row["State name"]}],
+    )
 bar_chart.render()
 
 rendered_bar_chart = bar_chart.render().decode("utf-8")
