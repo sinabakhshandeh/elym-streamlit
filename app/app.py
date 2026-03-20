@@ -1,16 +1,15 @@
 import streamlit as st
 
-pages = {
-    "Section 1": [
-        st.Page("0-home.py", title="Home"),
-    ],
-    "Section 2": [
-        st.Page("1-graphical_analysis.py", title="Geographic Analysis"),
-        st.Page("2-timeline-development.py", title="Temporal Trends"),
-        st.Page("3-technology.py", title="Technology and Product Analysis"),
-        st.Page("4-barriers-challenges.py", title="Barriers and Challenges"),
-    ],
-}
+exec(open("app/0-home.py").read())
+st.divider()
 
-pg = st.navigation(pages)
-pg.run()
+exec(open("app/1-graphical_analysis.py").read())
+st.divider()
+
+exec(open("app/2-timeline-development.py").read())
+st.divider()
+
+exec(open("app/3-technology.py").read())
+st.divider()
+
+exec(open("app/4-barriers-challenges.py").read())
