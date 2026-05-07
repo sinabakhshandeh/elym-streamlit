@@ -1,21 +1,23 @@
+import pandas as pd
 import pygal
+from plotly import graph_objects as go
 import streamlit as st
 
 st.write("# Technology and Product Analysis")
 
 st.write("## What are projects built with?")
 
-bar_chart = pygal.StackedBar(style=pygal.style.TurquoiseStyle)
-bar_chart.title = "Elecrolyser Technology over time (2021-2024)"
-bar_chart.x_labels = [2021, 2022, 2023, 2024]
-bar_chart.add("PEM", [47.4, 50.0, 35.3, 53.3])
-bar_chart.add("ALK", [26.3, 18.8, 14.7, 13.3])
-bar_chart.add("SOEC", [21.1, 0, 14.7, 6.7])
-bar_chart.add("AEMWE", [0, 0, 14.7, 3.3])
-bar_chart.add("Other Electrolysis", [5.3, 31.2, 20.5, 23.3])
-renderedbar_chart = bar_chart.render().decode("utf-8")
+fig = go.Figure()
+fig.add_trace(go.Bar(x=[2021, 2022, 2023, 2024], y=[47.4, 50.0, 35.3, 53.3], name="PEM"))
+fig.add_trace(go.Bar(x=[2021, 2022, 2023, 2024], y=[26.3, 18.8, 14.7, 13.3], name="ALK"))
+fig.add_trace(go.Bar(x=[2021, 2022, 2023, 2024], y=[21.1, 0, 14.7, 6.7], name="SOEC"))
+fig.add_trace(go.Bar(x=[2021, 2022, 2023, 2024], y=[0, 0, 14.7, 3.3], name="AEMWE"))
+fig.add_trace(go.Bar(x=[2021, 2022, 2023, 2024], y=[5.3, 31.2, 20.5, 23.3], name="Other Electrolysis"))
+fig.update_layout(title="Elecrolyser Technology over time (2021-2024)")
+fig.update_layout(barmode="stack")
 
-st.components.v1.html(renderedbar_chart, height=520)
+st.plotly_chart(fig)
+
 st.caption(
     "Compare the share of different electrolysis technologies in PtX projects in Germany from 2021 to 2024."
 )
