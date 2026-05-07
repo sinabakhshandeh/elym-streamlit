@@ -1,6 +1,6 @@
 import pandas as pd
-import pygal
 from plotly import graph_objects as go
+import plotly.express as px
 import streamlit as st
 
 st.write("# Technology and Product Analysis")
@@ -60,18 +60,26 @@ st.write(
     "Cumulatively, almost four out of five PtX projects in Germany target hydrogen as their main product, with a smaller but persistent group exploring liquid e‑fuels, methanol, synthetic hydrocarbons and methane."
 )
 
-pie_chart = pygal.Pie(style=pygal.style.TurquoiseStyle)
-pie_chart.title = "Total distribution of product output from 2021 to 2024"
-pie_chart.add("H2", 77.8)
-pie_chart.add("Synfuels (liquid e‑fuels etc.)", 10.1)
-pie_chart.add("MeOH", 6.1)
-pie_chart.add("Synthetic hydrocarbons", 2)
-pie_chart.add("CH₄", 2)
-pie_chart.add("None (not specified yet)", 2)
-pie_chart.render()
+data = {
+    'product': [
+        'H2',
+        'Synfuels (liquid e‑fuels etc.)',
+        'MeOH',
+        'Synthetic hydrocarbons',
+        'CH₄',
+        'None (not specified yet)'
+    ],
+    'percentage': [77.8, 10.1, 6.1, 2, 2, 2]
+}
+df = pd.DataFrame(data)
+fig = px.pie(df, values='percentage', names='product',
+             title='Total distribution of product output from 2021 to 2024')
+fig.update_traces(textposition='inside', textinfo='percent+label')
+fig.update_layout(
+    margin=dict(t=50, b=50, l=50, r=50)  # reduce margins = bigger pie
+)
+st.plotly_chart(fig)
 
-rendered_pie_chart = pie_chart.render().decode("utf-8")
-st.components.v1.html(rendered_pie_chart, height=520)
 st.caption(
     "Compare the cumulative share of different PtX products in projects in Germany from 2021 to 2024."
 )
