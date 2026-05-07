@@ -35,18 +35,18 @@ st.write(
     "The data suggests that PEM has become the workhorse technology for PtX projects in Germany.  Its flexibility, fast response and falling stack costs make it attractive where projects need to follow variable wind and solar generation.  ALK still appears in a meaningful minority of projects, but its share declines as developers prioritise controllability and grid services over purely low upfront cost.  SOEC and AEMWE remain niche, reflecting their higher technical risk and the need for more demonstration experience."
 )
 
-bar_chart = pygal.StackedBar(style=pygal.style.TurquoiseStyle)
-bar_chart.title = "Product focus over time (2021-2024)"
-bar_chart.x_labels = [2021, 2022, 2023, 2024]
-bar_chart.add("H₂", [63.2, 81.2, 79.4, 83.3])
-bar_chart.add("MeOH", [5.3, 6.2, 11.8, 0])
-bar_chart.add("Synfuels", [21.1, 6.2, 5.9, 10.0])
-bar_chart.add("CH₄", [0, 0, 2.9, 3.3])
-bar_chart.add("Synthetic hydrocarbons (subset)", [10.5, 0, 0, 0])
-bar_chart.add("None", [0, 6.2, 0, 3.3])
+fig = go.Figure()
+fig.add_trace(go.Bar(x=[2021, 2022, 2023, 2024], y=[63.2, 81.2, 79.4, 83.3], name="H₂"))
+fig.add_trace(go.Bar(x=[2021, 2022, 2023, 2024], y=[5.3, 6.2, 11.8, 0], name="MeOH"))
+fig.add_trace(go.Bar(x=[2021, 2022, 2023, 2024], y=[21.1, 6.2, 5.9, 10.0], name="Synfuels"))
+fig.add_trace(go.Bar(x=[2021, 2022, 2023, 2024], y=[0, 0, 2.9, 3.3], name="CH₄"))
+fig.add_trace(go.Bar(x=[2021, 2022, 2023, 2024], y=[10.5, 0, 0, 0], name="Synthetic hydrocarbons (subset)"))
+fig.add_trace(go.Bar(x=[2021, 2022, 2023, 2024], y=[0, 6.2, 0, 3.3], name="None"))
+fig.update_layout(title="Product focus over time (2021-2024)")
+fig.update_layout(barmode="stack")
 
-renderedbar_chart = bar_chart.render().decode("utf-8")
-st.components.v1.html(renderedbar_chart, height=520)
+st.plotly_chart(fig)
+
 st.caption(
     "Compare the share of different PtX products in projects in Germany from 2021 to 2024."
 )
