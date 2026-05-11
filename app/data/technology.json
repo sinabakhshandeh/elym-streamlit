@@ -1,0 +1,6 @@
+{
+    "2021": {"PEM": 9, "ALK": 4, "SOEC": 5, "Other Electrolysis": 1},
+    "2022": {"PEM": 8, "ALK": 3, "Other Electrolysis": 5},
+    "2023": {"PEM": 12, "ALK": 5, "SOEC": 5, "AEMWE": 5, "Other Electrolysis": 6},
+    "2024": {"PEM": 16, "ALK": 4, "SOEC": 2,  "AEMWE": 1,  "Other Electrolysis": 7}
+}

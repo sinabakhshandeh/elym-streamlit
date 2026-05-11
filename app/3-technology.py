@@ -9,14 +9,21 @@ st.write("# Technology and Product Analysis")
 
 st.write("## What are projects built with?")
 
-fig = go.Figure()
-fig.add_trace(go.Bar(x=[2021, 2022, 2023, 2024], y=[47.4, 50.0, 35.3, 53.3], name="PEM"))
-fig.add_trace(go.Bar(x=[2021, 2022, 2023, 2024], y=[26.3, 18.8, 14.7, 13.3], name="ALK"))
-fig.add_trace(go.Bar(x=[2021, 2022, 2023, 2024], y=[21.1, 0, 14.7, 6.7], name="SOEC"))
-fig.add_trace(go.Bar(x=[2021, 2022, 2023, 2024], y=[0, 0, 14.7, 3.3], name="AEMWE"))
-fig.add_trace(go.Bar(x=[2021, 2022, 2023, 2024], y=[5.3, 31.2, 20.5, 23.3], name="Other Electrolysis"))
-fig.update_layout(title="Elecrolyser Technology over time (2021-2024)")
-fig.update_layout(barmode="stack")
+with open('app/data/technology.json') as f:
+    technology = json.load(f)
+
+df = pd.DataFrame(technology).T.fillna(0).reset_index()
+df['index'] = df['index'].astype(int).astype(str)
+df.rename(columns={'index': 'year'}, inplace=True)
+
+fig = px.area(df, x='year', y=df.columns[1:], title='Elecrolyser Technology over time (2021-2024)')
+fig.update_xaxes(type='category')
+
+fig.update_layout(
+    xaxis_title='Year',
+    yaxis_title='Number of projects',
+    hovermode='x unified',
+)
 
 st.plotly_chart(fig)
 
