@@ -13,14 +13,27 @@ st.write("# Temporal Trends & Project Lifecycle")
 #     For 2024, 85 projects are again tracked, with 30 appearing only in the 2024 dataset; here 66.7% of these 30 projects reach implementation stages (FID, under construction, or operational). At the capacity level, 2024 stands out: 380.76 MW is realised, corresponding to 61.3% of that year’s planned 621.1 MW capacity and about 22.8% of the 1.67 GW/year required for the 2030 goal.
 #     """)
 
-line_chart = pygal.Line(style=pygal.style.TurquoiseStyle)
-line_chart.title = "Annual Capacity - Ambition vs Implementation (2021-2024)"
-line_chart.x_labels = [2021, 2022, 2023, 2024]
-line_chart.add("Planned cap. GW", [0.08549, 0.31729, 0.32927, 0.62110])
-line_chart.add("Implemented cap. GW", [0.01830, 0.09665, 0.24047, 0.38076])
-render_line_chart = line_chart.render()
+import plotly.graph_objects as go
 
-st.components.v1.html(render_line_chart, height=520)
+x = ["2021", "2022", "2023", "2024"]
+
+fig = go.Figure()
+fig.update_xaxes(type='category')
+
+fig.add_trace(go.Scatter(
+    x=x,
+    y=[0.08549, 0.31729, 0.32927, 0.62110],
+    name = 'Planned cap. GW',
+))
+fig.add_trace(go.Scatter(
+    x=x,
+    y=[0.01830, 0.09665, 0.24047, 0.38076],
+    name='Implemented cap. GW',
+))
+
+fig.update_layout(title='"Annual Capacity - Ambition vs Implementation (2021-2024)"')
+st.plotly_chart(fig)
+
 st.caption(
     "Compare annulal planned and implemented PtX capacity in Germany from 2021 to 2024."
 )
