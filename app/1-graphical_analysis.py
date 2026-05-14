@@ -50,7 +50,7 @@ Analysis at NUTS 1 (Federal States) and NUTS 3 (District) levels reveals strong 
 
 st.write("## Distribution of Announced Projects Across German NUTS1 Regions")
 
-df = pd.read_csv("./data/dist-ptx-nut1.csv")
+df = pd.read_csv("app/data/dist-ptx-nut1.csv")
 
 col1, col2, col3 = st.columns(3)
 with col1:
@@ -64,7 +64,7 @@ with col3:
     )
 
 df11 = px.data.carshare()
-df11 = pd.read_csv("./data/project-distribution.csv")
+df11 = pd.read_csv("app/data/project-distribution.csv")
 
 fig = px.scatter_map(
     df11,
