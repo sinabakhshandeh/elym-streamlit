@@ -12,4 +12,4 @@ st.divider()
 exec(open("app/3-technology.py").read())
 st.divider()
 
-exec(open("app/4-barriers-challenges.py").read())
+exec(open("app/faq.py").read())
