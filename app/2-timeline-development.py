@@ -3,26 +3,14 @@ import streamlit as st
 
 st.write("# Temporal Trends & Project Lifecycle")
 
-st.write("## How project status evolves over time")
-st.write(
-    "From 2021 to 2024, PtX projects in Germany move only slowly from early ideas into real infrastructure. Each year’s dataset shows many new announcements, but a large share remains stuck in concept, feasibility, or demo stages."
-)
-
-st.write(
-    """In 2021, 55 projects are tracked; only 5 reach the operational stage while 10 remain in feasibility studies, and almost 77% of announced capacity (65.95 MW of 85.5 MW) is still in feasibility by year end. This translates into a same‑year realisation rate of about 21.4% for capacity (0.0183 GW implemented out of 0.08549 GW planned"""
-)
-
-st.write(
-    """By 2022, the picture improves for the small 2022 cohort: of the 16 projects evaluated in detail, roughly 85.7% reach implementation stages over time, but many do not disclose robust capacity figures. In capacity terms, 2022 sees 0.31729 GW planned and only 0.09665 GW realised in that year, corresponding to a same‑year realisation rate of 30.5% and covering just 7.7% of the 1.25 GW average annual additions needed for the 10 GW target."""
-)
-
-st.write(
-    """The 2023 cohort is larger: 85 projects are analysed, with 34 coming only from the 2023 dataset, and project counts rise by about 36% compared to 2022. Implementation looks strong for the subset of 34 projects examined closely, where 64.7% progress to implementation, and in capacity terms 240.47 MW is realised, equal to 17.43% of the 1.38 GW/year required to reach 10 GW by 2030."""
-)
-
-st.write(
-    """For 2024, 85 projects are again tracked, with 30 appearing only in the 2024 dataset; here 66.7% of these 30 projects reach implementation stages (FID, under construction, or operational). At the capacity level, 2024 stands out: 380.76 MW is realised, corresponding to 61.3% of that year’s planned 621.1 MW capacity and about 22.8% of the 1.67 GW/year required for the 2030 goal."""
-)
+# st.write("## How project status evolves over time")
+# st.write("""
+#     From 2021 to 2024, PtX projects in Germany move only slowly from early ideas into real infrastructure. Each year’s dataset shows many new announcements, but a large share remains stuck in concept, feasibility, or demo stages.
+#     In 2021, 55 projects are tracked; only 5 reach the operational stage while 10 remain in feasibility studies, and almost 77% of announced capacity (65.95 MW of 85.5 MW) is still in feasibility by year end. This translates into a same‑year realisation rate of about 21.4% for capacity (0.0183 GW implemented out of 0.08549 GW planned.
+#     By 2022, the picture improves for the small 2022 cohort: of the 16 projects evaluated in detail, roughly 85.7% reach implementation stages over time, but many do not disclose robust capacity figures. In capacity terms, 2022 sees 0.31729 GW planned and only 0.09665 GW realised in that year, corresponding to a same‑year realisation rate of 30.5% and covering just 7.7% of the 1.25 GW average annual additions needed for the 10 GW target.
+#     The 2023 cohort is larger: 85 projects are analysed, with 34 coming only from the 2023 dataset, and project counts rise by about 36% compared to 2022. Implementation looks strong for the subset of 34 projects examined closely, where 64.7% progress to implementation, and in capacity terms 240.47 MW is realised, equal to 17.43% of the 1.38 GW/year required to reach 10 GW by 2030.
+#     For 2024, 85 projects are again tracked, with 30 appearing only in the 2024 dataset; here 66.7% of these 30 projects reach implementation stages (FID, under construction, or operational). At the capacity level, 2024 stands out: 380.76 MW is realised, corresponding to 61.3% of that year’s planned 621.1 MW capacity and about 22.8% of the 1.67 GW/year required for the 2030 goal.
+#     """)
 
 line_chart = pygal.Line(style=pygal.style.TurquoiseStyle)
 line_chart.title = "Annual Capacity - Ambition vs Implementation (2021-2024)"
@@ -77,12 +65,11 @@ st.caption(
     "Despite this improvement, the capacities behind many projects are modest and a large part of national ambition remains concentrated in early‑stage, high‑capacity projects that do not progress at the same speed"
 )
 
-st.write(
-    "Looking at the timelines from 2021 to 2024, a clear pattern emerges: PtX projects in Germany are easy to announce, but hard to build.  Early years are dominated by feasibility studies 77% of 2021 capacity remains stuck there and only a thin slice reaches construction or operation."
-)
-st.write(
-    "By 2023 and 2024, more capacity flows into FID and under‑construction stages, and annual realised capacity rises from 18.3 MW in 2021 to 380.76 MW in 2024.  At the same time, announced capacities for later years spike to more than 1.2 GW before being revised down to 621.1 MW in the 2024 dataset because many projects are delayed, re‑scaled, or dropped."
-)
-st.write(
-    "This mismatch between fast‑growing ambition and slower implementation is what the thesis describes as the ambition–implementation gap.  Germany’s target of 10 GW by 2030 requires sustained annual additions above 1 GW, but realised capacity in 2024 still reaches only 22.8% of that benchmark."
-)
+st.write("""
+    Looking at the timelines from 2021 to 2024, a clear pattern emerges: PtX projects in Germany are easy to announce, but hard to build.
+    """)
+
+    # Early years are dominated by feasibility studies 77% of 2021 capacity remains stuck there and only a thin slice reaches construction or operation.
+    # By 2023 and 2024, more capacity flows into FID and under‑construction stages, and annual realised capacity rises from 18.3 MW in 2021 to 380.76 MW in 2024.  At the same time, announced capacities for later years spike to more than 1.2 GW before being revised down to 621.1 MW in the 2024 dataset because many projects are delayed, re‑scaled, or dropped.
+    # This mismatch between fast‑growing ambition and slower implementation is what the thesis describes as the ambition–implementation gap.  Germany’s target of 10 GW by 2030 requires sustained annual additions above 1 GW, but realised capacity in 2024 still reaches only 22.8% of that benchmark.
+    # """)
