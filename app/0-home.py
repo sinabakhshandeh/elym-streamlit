@@ -5,8 +5,6 @@ Image.MAX_IMAGE_PIXELS = 500_000_000
 
 st.write("# Power-to-X in Germany")
 
-
-
 st.write("### Status Review & Analysis of the Implementation-Ambition Gap (2021-2024)")
 
 col1, col2, col3 = st.columns(3)
@@ -30,8 +28,6 @@ with col3:
             help="Significant gap between planned and operational capacity",
         )
 
-st.markdown("---")
-
 cols = st.columns(3)
 with cols[0]:
     st.metric("📊 Projects", "1,238+")
@@ -48,52 +44,11 @@ with cols2[1]:
 with cols2[2]:
     st.metric("📊 Data Sources", "3")
 
-st.markdown("---")
 st.markdown("### 🎯 KEY FINDING")
-st.warning("""**By 2024, only 0.44 GW of the planned 3.38 GW capacity is operational.**
+st.warning("""
+**By 2024, only 0.44 GW of the planned 3.38 GW capacity is operational.**
 
 At the current trajectory, Germany will miss its 10 GW target by 2030 unless urgent action is taken to accelerate implementation.
 
 **Implementation rate has stalled:** 85.7% (2022) → 65% (2023) → 13% (2024)
 """)
-
-
-data = {
-    "State name": [
-        "Baden-Württemberg",
-        "Bavaria",
-        "Berlin",
-        "Brandenburg",
-        "Bremen",
-        "Hamburg",
-        "Hessen",
-        "Mecklenburg-Vorpommern",
-        "Lower Saxony",
-        "Nordrhein-Westfalen",
-        "Rheinland-Pfalz",
-        "Saarland",
-        "Saxony",
-        "Saxony-Anhalt",
-        "Schleswig-Holstein",
-        "Thüringen",
-    ],
-    "Code": [
-        "DE1",
-        "DE2",
-        "DE3",
-        "DE4",
-        "DE5",
-        "DE6",
-        "DE7",
-        "DE8",
-        "DE9",
-        "DEA",
-        "DEB",
-        "DEC",
-        "DED",
-        "DEE",
-        "DEF",
-        "DEG",
-    ],
-    "projects": [8, 13, 0, 6, 9, 1, 3, 1, 19, 16, 4, 1, 6, 9, 2, 1],
-}
