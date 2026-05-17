@@ -1,5 +1,6 @@
 import streamlit as st
-from utils.i18n import translate, SUPPORTED_LANGS
+
+from utils.i18n import tr, SUPPORTED_LANGS
 
 LANG_FLAGS = {"en": "🇬🇧", "de": "🇩🇪"}
 
@@ -16,8 +17,7 @@ def render_language_selector():
 
 render_language_selector()
 
-
-exec(open("app/0-home.py").read())
+exec(open("app/abstract.py").read())
 st.divider()
 
 exec(open("app/1-graphical_analysis.py").read())
