@@ -69,5 +69,166 @@
     "project_distribution_section": {
       "title": "Project Distribution"
     }
+  },
+
+  "temporal": {
+    "title": "Temporal Trends & Project Lifecycle",
+
+    "capacity_chart": {
+      "chart_title": "Annual Capacity - Ambition vs Implementation (2021-2024)",
+      "legend": {
+        "planned": "Planned cap. GW",
+        "implemented": "Implemented cap. GW"
+      },
+      "caption": "Compare annual planned and implemented PtX capacity in Germany from 2021 to 2024."
+    },
+
+    "project_status_section": {
+      "title": "Project status over time",
+      "description": "Projects status defines six lifecycle stages: concept, feasibility, demo, FID, under construction, and operational.",
+
+      "yearly_accordions": {
+        "2021": {
+          "label": "2021 Projects",
+          "insight": "For 2021 projects, about 77.1% of announced capacity stays in feasibility; only a modest share reaches FID, construction, or operation."
+        },
+        "2022": {
+          "label": "2022 Projects",
+          "insight": "For 2022 projects, concept plus feasibility still dominate (around 220 MW out of 317.29 MW), but there is a visible increase in FID and under-construction capacity."
+        },
+        "2023": {
+          "label": "2023 Projects",
+          "insight": "For 2023 projects, FID capacity peaks at 181 MW and under-construction reaches 55 MW, while operational capacity begins to appear at 4.47 MW."
+        },
+        "2024": {
+          "label": "2024 Projects",
+          "insight": "For 2024 projects, total tracked capacity reduces to 169.95 MW, with 118 MW in FID and 148.76 MW under construction, and 39 MW already operational; concept and feasibility categories shrink sharply."
+        }
+      }
+    },
+
+    "implementation_rate_section": {
+      "title": "Implementation rate",
+      "description": "Based on project counts and defines an implementation rate as the share of projects that have moved into implementation stages.",
+
+      "chart": {
+        "title": "Implementation rate evolution (in %)",
+        "caption": "Despite this improvement, the capacities behind many projects are modest and a large part of national ambition remains concentrated in early-stage, high-capacity projects that do not progress at the same speed."
+      },
+
+      "conclusion": "Looking at the timelines from 2021 to 2024, a clear pattern emerges: PtX projects in Germany are easy to announce, but hard to build."
+    }
+  },
+
+  "technology": {
+    "title": "Technology and Product Analysis",
+
+    "electrolyser_section": {
+      "title": "What are projects built with?",
+
+      "chart": {
+        "title": "Electrolyser Technology over time (2021-2024)",
+        "y_axis_label": "Number of projects",
+        "x_axis_label": "Year",
+        "legend_label": "variable",
+        "caption": "Compare the share of different electrolysis technologies in PtX projects in Germany from 2021 to 2024."
+      },
+
+      "insights": {
+        "overview": "PEM dominates the project landscape in every year, ranging from about one-third to over half of all projects. ALK loses share over time, while SOEC, AEMWE and \"other\" electrolysis methods gradually appear as developers test more experimental options alongside the mature technologies.",
+        "deep_dive": "The data suggests that PEM has become the workhorse technology for PtX projects in Germany. Its flexibility, fast response and falling stack costs make it attractive where projects need to follow variable wind and solar generation. ALK still appears in a meaningful minority of projects, but its share declines as developers prioritise controllability and grid services over purely low upfront cost. SOEC and AEMWE remain niche, reflecting their higher technical risk and the need for more demonstration experience."
+      }
+    },
+
+    "product_output_section": {
+      "chart": {
+        "title": "Distribution of Product Output from 2021 to 2024",
+        "y_axis_label": "Number of projects",
+        "x_axis_label": "Year",
+        "legend_label": "variable",
+        "caption": "Compare the share of different PtX products in projects in Germany from 2021 to 2024."
+      },
+      "insight": "Across all four years, hydrogen clearly dominates the PtX product portfolio, rising from about 63% of projects in 2021 to over 83% in 2024. Synfuels and methanol appear every year but remain secondary, while methane and \"no defined product yet\" signal pilot and experimental projects rather than large-scale deployment."
+    },
+
+    "cumulative_product_section": {
+      "title": "Cumulative product picture",
+      "description": "Cumulatively, almost four out of five PtX projects in Germany target hydrogen as their main product, with a smaller but persistent group exploring liquid e-fuels, methanol, synthetic hydrocarbons and methane.",
+
+      "chart": {
+        "title": "Total Distribution of PtX Product Output (2021-2024)",
+        "legend_label": "PtX Products",
+        "caption": "Compare the cumulative share of different PtX products in projects in Germany from 2021 to 2024."
+      },
+
+      "insights": {
+        "overview": "The combination of PEM dominance and a strong bias toward hydrogen output suggests that German PtX deployments are optimised first for flexible, grid-coupled H₂ production rather than for complex downstream synthesis routes. Liquid synfuels and methanol appear mainly in smaller project numbers, often in demonstration settings or targeting specific industrial or transport niches.",
+        "outlook": "If this pattern continues, Germany's near-term PtX system will look like a hydrogen backbone with smaller satellites of methanol and e-fuel projects attached to it. For sectors such as aviation or chemical feedstocks, this means that scaling synfuels will depend on how quickly these early, technology-diverse pilot projects can be de-risked and replicated."
+      }
+    }
+  },
+
+  "faq": {
+    "title": "❓ Frequently Asked Questions",
+
+    "questions": {
+      "what_is_ptx": {
+        "question": "What is Power-to-X?",
+        "answer": "**Power-to-X (PtX)** technologies convert surplus renewable electricity into storable and transportable energy carriers such as hydrogen, synthetic fuels, and chemicals. These technologies are essential for Germany's energy transition, enabling the decarbonization of sectors that cannot be directly electrified, including industrial processes, aviation, and long-distance shipping."
+      },
+
+      "why_it_matters": {
+        "question": "Why It Matters for Germany",
+        "answer": "Germany has committed to climate neutrality by 2045 and aims to achieve a 10 GW electrolysis capacity by 2030 as part of its National Hydrogen Strategy. PtX technologies are critical for achieving these goals while reducing dependence on imported fossil fuels and supporting the integration of variable renewable energy sources (wind and solar)."
+      },
+
+      "technical_barriers": {
+        "question": "Technical barriers (engineering problems)",
+
+        "table": {
+          "col_barrier_type": "Barrier type",
+          "col_qualitative_weight": "Qualitative weight",
+          "rows": {
+            "1": {
+              "label": "Technical challenges",
+              "weight": "High stack degradation, grid integration, materials, thermal control"
+            },
+            "2": {
+              "label": "Regulatory/policy",
+              "weight": "High permits, certification, unclear rules"
+            },
+            "3": {
+              "label": "Economic/financial",
+              "weight": "High CapEx, power price, CO₂ cost"
+            }
+          }
+        },
+
+        "paragraphs": {
+          "interaction": "The implementation gap in PtX projects is not caused by a single factor. Technical issues like stack degradation, grid bottlenecks and critical-material constraints interact with regulatory and financial risks, so problems in one dimension often trigger delays in others.",
+          "pem_scaling": "On the technical side, scaling PEM electrolysers from a few megawatts to hundreds of megawatts exposes limits in materials, cooling and system design. Uneven temperature and pressure across large stacks accelerate catalyst degradation, while strict water purity and membrane hydration requirements raise the risk that minor process deviations damage expensive components. At system level, integrating dozens of identical modules into a single plant and connecting them to stressed 110 kV networks in Lower Saxony and northern Germany creates congestion hotspots and voltage-stability issues if load-flow studies and grid-friendly controls are missing.",
+          "grid_stress": "Large-scale PtX plants stress both the equipment and the grid: operators must keep stacks within narrow thermal and chemical windows while simultaneously ensuring that 100–200 MW electrolysers do not overload local 110 kV networks. These constraints help explain why many projects remain at feasibility stage even after several years."
+        }
+      },
+
+      "financing_barriers": {
+        "question": "Why projects don't get financed",
+
+        "bullet_points": {
+          "1": "Fragmented certification for green hydrogen (Guarantees of Origin not harmonised).",
+          "2": "Weak and distorted EU ETS carbon price (free allocation for heavy industry).",
+          "3": "Unclear legal status for hydrogen pipelines and storage (TEN-E, national energy laws).",
+          "4": "High electrolyser CapEx (60–80% of total plant investment).",
+          "5": "Expensive and volatile electricity (often > 5 EUR/kg H₂ contribution).",
+          "6": "High CO₂ feedstock costs (≈ 85–209 EUR/t via DAC, 25–135 EUR/t from flue gas plus transport)."
+        },
+
+        "paragraphs": {
+          "financial_close": "Even technically solid projects struggle to reach financial close. Electrolysers still account for 60–80% of plant CapEx, while electricity can represent more than half of the levelised cost of hydrogen and often pushes OpEx above 5 EUR/kg. At the same time, developers face fragmented certification rules, unclear pipeline regulation and limited long-term support instruments, which makes it hard to sign the bankable contracts lenders expect.",
+          "pattern": "When you look across all case years from 2021 to 2024, the pattern is consistent: projects accumulate in the feasibility-study phase and comparatively few reach FID or operation. The technical section of the thesis shows how reliability concerns, grid bottlenecks and critical-material supply add engineering risk on top of the pure economics of hydrogen production.",
+          "hard_stop": "The regulatory and financial analysis explains why this risk often becomes a hard stop. Weak carbon prices and fragmented Guarantees of Origin limit the premium that buyers are willing to pay, while there is no widely used instrument such as carbon contracts for difference to stabilise revenues. Combined with high capital costs, volatile power prices and expensive CO₂ feedstock, these conditions create precisely the kind of uncertainty that keeps projects in \"announced\" or \"feasibility\" status instead of being built."
+        }
+      }
+    }
   }
 }

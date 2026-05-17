@@ -69,5 +69,166 @@
     "project_distribution_section": {
       "title": "Projektverteilung"
     }
+  },
+
+  "temporal": {
+    "title": "Zeitliche Trends & Projektlebenszyklus",
+
+    "capacity_chart": {
+      "chart_title": "Jährliche Kapazität – Ambition vs. Umsetzung (2021–2024)",
+      "legend": {
+        "planned": "Geplante Kap. GW",
+        "implemented": "Umgesetzte Kap. GW"
+      },
+      "caption": "Vergleich der jährlich geplanten und umgesetzten PtX-Kapazität in Deutschland von 2021 bis 2024."
+    },
+
+    "project_status_section": {
+      "title": "Projektstatus im Zeitverlauf",
+      "description": "Der Projektstatus umfasst sechs Lebenszyklusphasen: Konzept, Machbarkeit, Demo, FID, im Bau und in Betrieb.",
+
+      "yearly_accordions": {
+        "2021": {
+          "label": "Projekte 2021",
+          "insight": "Bei den Projekten aus 2021 verbleiben etwa 77,1 % der angekündigten Kapazität in der Machbarkeitsphase; nur ein kleiner Anteil erreicht FID, Bau oder Betrieb."
+        },
+        "2022": {
+          "label": "Projekte 2022",
+          "insight": "Bei den Projekten aus 2022 dominieren Konzept und Machbarkeit weiterhin (ca. 220 MW von 317,29 MW), jedoch ist ein sichtbarer Anstieg bei FID- und Baukapazität erkennbar."
+        },
+        "2023": {
+          "label": "Projekte 2023",
+          "insight": "Bei den Projekten aus 2023 erreicht die FID-Kapazität mit 181 MW ihren Höchststand, der Bau kommt auf 55 MW, während die Betriebskapazität mit 4,47 MW erstmals in Erscheinung tritt."
+        },
+        "2024": {
+          "label": "Projekte 2024",
+          "insight": "Bei den Projekten aus 2024 sinkt die erfasste Gesamtkapazität auf 169,95 MW, mit 118 MW in FID und 148,76 MW im Bau sowie 39 MW bereits in Betrieb; Konzept- und Machbarkeitskategorien schrumpfen deutlich."
+        }
+      }
+    },
+
+    "implementation_rate_section": {
+      "title": "Umsetzungsrate",
+      "description": "Basierend auf der Projektanzahl wird die Umsetzungsrate als Anteil der Projekte definiert, die in die Umsetzungsphasen übergegangen sind.",
+
+      "chart": {
+        "title": "Entwicklung der Umsetzungsrate (in %)",
+        "caption": "Trotz dieser Verbesserung sind die Kapazitäten hinter vielen Projekten bescheiden, und ein großer Teil des nationalen Ambitionsniveaus konzentriert sich auf frühe, kapazitätsstarke Projekte, die nicht im gleichen Tempo voranschreiten."
+      },
+
+      "conclusion": "Betrachtet man die Zeiträume von 2021 bis 2024, zeichnet sich ein klares Muster ab: PtX-Projekte in Deutschland sind leicht anzukündigen, aber schwer umzusetzen."
+    }
+  },
+
+  "technology": {
+    "title": "Technologie- und Produktanalyse",
+
+    "electrolyser_section": {
+      "title": "Womit werden Projekte gebaut?",
+
+      "chart": {
+        "title": "Elektrolyseur-Technologie im Zeitverlauf (2021–2024)",
+        "y_axis_label": "Anzahl der Projekte",
+        "x_axis_label": "Jahr",
+        "legend_label": "Variable",
+        "caption": "Vergleich des Anteils verschiedener Elektrolysetechnologien in PtX-Projekten in Deutschland von 2021 bis 2024."
+      },
+
+      "insights": {
+        "overview": "PEM dominiert die Projektlandschaft in jedem Jahr und macht etwa ein Drittel bis über die Hälfte aller Projekte aus. ALK verliert im Zeitverlauf Marktanteile, während SOEC, AEMWE und „andere\" Elektrolysemethoden allmählich auftauchen, da Entwickler neben den etablierten Technologien auch experimentellere Optionen erproben.",
+        "deep_dive": "Die Daten legen nahe, dass PEM zur Schlüsseltechnologie für PtX-Projekte in Deutschland geworden ist. Seine Flexibilität, schnelle Reaktionsfähigkeit und sinkende Stackkosten machen es attraktiv für Projekte, die auf variable Wind- und Solarenergie ausgerichtet sind. ALK ist noch in einer relevanten Minderheit von Projekten vertreten, verliert jedoch Anteile, da Entwickler Regelbarkeit und Netzdienstleistungen gegenüber rein niedrigen Anfangsinvestitionen bevorzugen. SOEC und AEMWE bleiben Nischentechnologien, was ihr höheres technisches Risiko und den Bedarf an weiteren Demonstrationserfahrungen widerspiegelt."
+      }
+    },
+
+    "product_output_section": {
+      "chart": {
+        "title": "Verteilung der Produktionsleistung von 2021 bis 2024",
+        "y_axis_label": "Anzahl der Projekte",
+        "x_axis_label": "Jahr",
+        "legend_label": "Variable",
+        "caption": "Vergleich des Anteils verschiedener PtX-Produkte in Projekten in Deutschland von 2021 bis 2024."
+      },
+      "insight": "Über alle vier Jahre hinweg dominiert Wasserstoff das PtX-Produktportfolio klar und steigt von etwa 63 % der Projekte im Jahr 2021 auf über 83 % im Jahr 2024. Synthesekraftstoffe und Methanol sind zwar jedes Jahr vertreten, bleiben aber nachrangig, während Methan und „noch kein definiertes Produkt\" eher Pilot- und Experimentalprojekte als großskalige Deployments signalisieren."
+    },
+
+    "cumulative_product_section": {
+      "title": "Kumulatives Produktbild",
+      "description": "Kumulativ betrachtet zielt fast jedes fünfte PtX-Projekt in Deutschland auf Wasserstoff als Hauptprodukt ab, während eine kleinere, aber beständige Gruppe flüssige E-Kraftstoffe, Methanol, synthetische Kohlenwasserstoffe und Methan erforscht.",
+
+      "chart": {
+        "title": "Gesamtverteilung der PtX-Produktionsleistung (2021–2024)",
+        "legend_label": "PtX-Produkte",
+        "caption": "Vergleich des kumulativen Anteils verschiedener PtX-Produkte in Projekten in Deutschland von 2021 bis 2024."
+      },
+
+      "insights": {
+        "overview": "Die Kombination aus PEM-Dominanz und einer starken Ausrichtung auf Wasserstoffproduktion deutet darauf hin, dass deutsche PtX-Deployments vorrangig für eine flexible, netzgekoppelte H₂-Erzeugung optimiert werden – und nicht für komplexe nachgelagerte Syntheserouten. Flüssige Synthesekraftstoffe und Methanol treten hauptsächlich in kleineren Projektzahlen auf, oft in Demonstrations­settings oder bei der Erschließung spezifischer industrieller oder Transportnischen.",
+        "outlook": "Setzt sich dieses Muster fort, wird Deutschlands kurzfristiges PtX-System wie ein Wasserstoff-Backbone aussehen, an dem kleinere Methanol- und E-Kraftstoffprojekte angedockt sind. Für Sektoren wie Luftfahrt oder chemische Grundstoffe bedeutet dies, dass die Skalierung von Synthesekraftstoffen davon abhängt, wie schnell diese frühen, technologisch vielfältigen Pilotprojekte risikoärmer gemacht und repliziert werden können."
+      }
+    }
+  },
+
+  "faq": {
+    "title": "❓ Häufig gestellte Fragen",
+
+    "questions": {
+      "what_is_ptx": {
+        "question": "Was ist Power-to-X?",
+        "answer": "**Power-to-X (PtX)**-Technologien wandeln überschüssigen erneuerbaren Strom in speicher- und transportierbare Energieträger wie Wasserstoff, synthetische Kraftstoffe und Chemikalien um. Diese Technologien sind essenziell für Deutschlands Energiewende und ermöglichen die Dekarbonisierung von Sektoren, die nicht direkt elektrifiziert werden können – darunter industrielle Prozesse, Luftfahrt und Hochseeschifffahrt."
+      },
+
+      "why_it_matters": {
+        "question": "Warum es für Deutschland wichtig ist",
+        "answer": "Deutschland hat sich zur Klimaneutralität bis 2045 verpflichtet und strebt im Rahmen seiner Nationalen Wasserstoffstrategie eine Elektrolysekapazität von 10 GW bis 2030 an. PtX-Technologien sind entscheidend für die Erreichung dieser Ziele, da sie die Abhängigkeit von importierten fossilen Brennstoffen reduzieren und die Integration variabler erneuerbarer Energiequellen (Wind und Solar) unterstützen."
+      },
+
+      "technical_barriers": {
+        "question": "Technische Barrieren (Ingenieursprobleme)",
+
+        "table": {
+          "col_barrier_type": "Barrierentyp",
+          "col_qualitative_weight": "Qualitatives Gewicht",
+          "rows": {
+            "1": {
+              "label": "Technische Herausforderungen",
+              "weight": "Hohe Stack-Degradation, Netzintegration, Materialien, Thermalkontrolle"
+            },
+            "2": {
+              "label": "Regulatorik/Politik",
+              "weight": "Hohe Genehmigungsanforderungen, Zertifizierung, unklare Regeln"
+            },
+            "3": {
+              "label": "Wirtschaftlich/finanziell",
+              "weight": "Hohe CapEx, Strompreise, CO₂-Kosten"
+            }
+          }
+        },
+
+        "paragraphs": {
+          "interaction": "Die Umsetzungslücke bei PtX-Projekten hat nicht eine einzige Ursache. Technische Probleme wie Stack-Degradation, Netzengpässe und Engpässe bei kritischen Materialien interagieren mit regulatorischen und finanziellen Risiken, sodass Probleme in einer Dimension häufig Verzögerungen in anderen auslösen.",
+          "pem_scaling": "Auf der technischen Seite zeigen sich beim Hochskalieren von PEM-Elektrolyseuren von wenigen Megawatt auf Hunderte von Megawatt Grenzen bei Materialien, Kühlung und Systemdesign. Ungleichmäßige Temperatur- und Druckverteilung über große Stacks beschleunigt die Katalysatordegradation, während strenge Anforderungen an Wasserreinheit und Membranhydratisierung das Risiko erhöhen, dass geringfügige Prozessabweichungen teure Komponenten beschädigen. Auf Systemebene entstehen durch die Integration dutzender identischer Module in eine einzige Anlage und deren Anschluss an belastete 110-kV-Netze in Niedersachsen und Norddeutschland Netzengpässe und Spannungsstabilitätsprobleme, wenn Lastflussuntersuchungen und netzfreundliche Steuerungen fehlen.",
+          "grid_stress": "Großangelegte PtX-Anlagen belasten sowohl die Ausrüstung als auch das Netz: Betreiber müssen Stacks in engen thermischen und chemischen Grenzen halten und gleichzeitig sicherstellen, dass 100–200-MW-Elektrolyseure lokale 110-kV-Netze nicht überlasten. Diese Randbedingungen erklären, warum viele Projekte auch nach mehreren Jahren noch in der Machbarkeitsphase verbleiben."
+        }
+      },
+
+      "financing_barriers": {
+        "question": "Warum Projekte keine Finanzierung erhalten",
+
+        "bullet_points": {
+          "1": "Fragmentierte Zertifizierung für grünen Wasserstoff (Herkunftsnachweise nicht harmonisiert).",
+          "2": "Schwacher und verzerrter EU-ETS-Kohlenstoffpreis (kostenlose Zuteilung für die Schwerindustrie).",
+          "3": "Unklarer Rechtsstatus für Wasserstoffleitungen und -speicher (TEN-E, nationale Energiegesetze).",
+          "4": "Hohe Elektrolyseur-CapEx (60–80 % der gesamten Anlageinvestition).",
+          "5": "Teurer und volatiler Strom (oft > 5 EUR/kg H₂-Beitrag).",
+          "6": "Hohe CO₂-Rohstoffkosten (≈ 85–209 EUR/t über DAC, 25–135 EUR/t aus Rauchgas plus Transport)."
+        },
+
+        "paragraphs": {
+          "financial_close": "Selbst technisch solide Projekte haben Schwierigkeiten, einen Finanzierungsabschluss zu erreichen. Elektrolyseure machen weiterhin 60–80 % der Anlagen-CapEx aus, während Strom mehr als die Hälfte der Gestehungskosten für Wasserstoff ausmachen und die OpEx häufig auf über 5 EUR/kg treiben kann. Gleichzeitig sehen sich Entwickler mit fragmentierten Zertifizierungsregeln, unklarer Pipeline-Regulierung und begrenzten langfristigen Förderinstrumenten konfrontiert, was den Abschluss der von Kreditgebern erwarteten bankfähigen Verträge erschwert.",
+          "pattern": "Betrachtet man alle Falljahrе von 2021 bis 2024, ist das Muster konsistent: Projekte akkumulieren sich in der Machbarkeitsstudienphase, und vergleichsweise wenige erreichen FID oder Betrieb. Der technische Teil der Analyse zeigt, wie Zuverlässigkeitsbedenken, Netzengpässe und knappe kritische Materialien dem reinen Wirtschaftlichkeitsrisiko der Wasserstoffproduktion ein weiteres Ingenieurrisiko hinzufügen.",
+          "hard_stop": "Die regulatorische und finanzielle Analyse erklärt, warum dieses Risiko häufig zu einem harten Stopp wird. Schwache Kohlenstoffpreise und fragmentierte Herkunftsnachweise begrenzen den Aufschlag, den Käufer zu zahlen bereit sind, während kein weit verbreitetes Instrument wie Carbon Contracts for Difference zur Stabilisierung der Einnahmen existiert. In Kombination mit hohen Kapitalkosten, volatilen Strompreisen und teuren CO₂-Rohstoffen schaffen diese Bedingungen genau die Art von Unsicherheit, die Projekte im „angekündigten\" oder „Machbarkeits\"-Status hält, anstatt sie zu bauen."
+        }
+      }
+    }
   }
 }
