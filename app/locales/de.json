@@ -43,5 +43,31 @@
       "body": "Bei der aktuellen Entwicklung wird Deutschland sein 10-GW-Ziel bis 2030 verfehlen, sofern keine dringenden Maßnahmen zur Beschleunigung der Umsetzung ergriffen werden.",
       "implementation_rate_label": "Umsetzungsrate stagniert:"
     }
+  },
+
+  "geographic": {
+    "title": "Geografische Analyse",
+    "subtitle": "Räumliche Verteilung der PtX-Projekte in Deutschland (2021-2024)",
+    "description": "Die Analyse auf NUTS-1-Ebene (Bundesländer) und NUTS-3-Ebene (Landkreise) zeigt eine starke regionale Konzentration und erhebliche Disparitäten in der Projektentwicklung.",
+
+    "distribution_section": {
+      "title": "Verteilung der angekündigten Projekte in Deutschland",
+
+      "stats": {
+        "total_projects": {
+          "label": "Projekte gesamt"
+        },
+        "average_per_state": {
+          "label": "Durchschnitt pro Bundesland"
+        },
+        "max_projects_state": {
+          "label": "Meiste Projekte (Bundesland)"
+        }
+      }
+    },
+
+    "project_distribution_section": {
+      "title": "Projektverteilung"
+    }
   }
 }

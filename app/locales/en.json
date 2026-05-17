@@ -43,5 +43,31 @@
       "body": "At the current trajectory, Germany will miss its 10 GW target by 2030 unless urgent action is taken to accelerate implementation.",
       "implementation_rate_label": "Implementation rate has stalled:"
     }
+  },
+
+   "geographic": {
+    "title": "Geographic Analysis",
+    "subtitle": "Spatial Distribution of PtX Projects Across Germany (2021-2024)",
+    "description": "Analysis at NUTS 1 (Federal States) and NUTS 3 (District) levels reveals strong regional concentration and significant disparities in project development.",
+
+    "distribution_section": {
+      "title": "Distribution of announced projects across Germany",
+
+      "stats": {
+        "total_projects": {
+          "label": "Total Projects"
+        },
+        "average_per_state": {
+          "label": "Average per State"
+        },
+        "max_projects_state": {
+          "label": "Max Projects (State)"
+        }
+      }
+    },
+
+    "project_distribution_section": {
+      "title": "Project Distribution"
+    }
   }
 }

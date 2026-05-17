@@ -20,7 +20,7 @@ render_language_selector()
 exec(open("app/abstract.py").read())
 st.divider()
 
-exec(open("app/1-graphical_analysis.py").read())
+exec(open("app/graphical_analysis.py").read())
 st.divider()
 
 exec(open("app/2-timeline-development.py").read())
