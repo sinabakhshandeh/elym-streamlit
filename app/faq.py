@@ -1,4 +1,6 @@
 import streamlit as st
+import PIL.Image as Image
+
 
 st.markdown("# ❓ Frequently Asked Questions")
 
