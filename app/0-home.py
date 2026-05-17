@@ -32,17 +32,18 @@ cols = st.columns(3)
 with cols[0]:
     st.metric("📊 Projects", "1,238+")
 with cols[1]:
-    st.metric("🏛️ Federal States", "16")
+    st.metric("📦 Products", "3")
 with cols[2]:
-    st.metric("📍 Districts", "107")
+    st.metric("🔧 Technologies", "8")
 
 cols2 = st.columns(3)
 with cols2[0]:
-    st.metric("📦 Products", "3")
-with cols2[1]:
-    st.metric("🔧 Technologies", "8")
-with cols2[2]:
     st.metric("📊 Data Sources", "3")
+
+# with cols[1]:
+#     st.metric("🏛️ Federal States", "16")
+# with cols[2]:
+#     st.metric("📍 Districts", "107")
 
 st.markdown("### 🎯 KEY FINDING")
 st.warning("""
