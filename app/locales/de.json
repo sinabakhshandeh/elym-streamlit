@@ -1,5 +1,47 @@
 {
   "abstract": {
-    "title": "Power-to-X in Deutschland"
+    "title": "Power-to-X in Deutschland",
+    "subtitle": "Statusüberblick & Analyse der Umsetzungs-Ambitions-Lücke (2021-2024)",
+
+    "metrics": {
+      "planned_capacity": {
+        "label": "Geplante Kapazität",
+        "description": "Alle PtX-Projekte, die zwischen 2021 und 2024 angekündigt wurden",
+        "capacity_label": "Kapazität"
+      },
+      "operational_capacity": {
+        "label": "Operative Kapazität",
+        "description": "Projekte, die derzeit in Betrieb sind",
+        "capacity_label": "Kapazität"
+      },
+      "ambition_impl_gap": {
+        "label": "Ambitions-Umsetzungs-Lücke",
+        "description": "Differenz zwischen geplanter und operativer Kapazität",
+        "capacity_label": "Kapazität",
+        "capacity_help": "Signifikante Lücke zwischen geplanter und operativer Kapazität"
+      }
+    },
+
+    "stats": {
+      "projects": {
+        "label": "📊  Projekte"
+      },
+      "products": {
+        "label": "📦 Produkte"
+      },
+      "technologies": {
+        "label": "🔧 Technologien"
+      },
+      "data_sources": {
+        "label": "💾 Datenquellen"
+      }
+    },
+
+    "key_finding": {
+      "title": "Kernergebnis",
+      "highlight": "Bis 2024 sind nur 0,44 GW der geplanten 3,38 GW Kapazität in Betrieb.",
+      "body": "Bei der aktuellen Entwicklung wird Deutschland sein 10-GW-Ziel bis 2030 verfehlen, sofern keine dringenden Maßnahmen zur Beschleunigung der Umsetzung ergriffen werden.",
+      "implementation_rate_label": "Umsetzungsrate stagniert:"
+    }
   }
 }

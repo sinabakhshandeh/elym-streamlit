@@ -1,5 +1,47 @@
 {
   "abstract": {
-    "title": "Power-to-X in Germany"
+    "title": "Power-to-X in Germany",
+    "subtitle": "Status Review & Analysis of the Implementation-Ambition Gap (2021-2024)",
+
+    "metrics": {
+      "planned_capacity": {
+        "label": "Planned Capacity",
+        "description": "All PtX projects announced between 2021 and 2024",
+        "capacity_label": "Capacity"
+      },
+      "operational_capacity": {
+        "label": "Operational Capacity",
+        "description": "Projects that are currently operational",
+        "capacity_label": "Capacity"
+      },
+      "ambition_impl_gap": {
+        "label": "Ambition-Impl. Gap",
+        "description": "Difference between planned and operational capacity",
+        "capacity_label": "Capacity",
+        "capacity_help": "Significant gap between planned and operational capacity"
+      }
+    },
+
+    "stats": {
+      "projects": {
+        "label": "📊  Projects"
+      },
+      "products": {
+        "label": "📦 Products"
+      },
+      "technologies": {
+        "label": "🔧 Technologies"
+      },
+      "data_sources": {
+        "label": "💾 Data Sources"
+      }
+    },
+
+    "key_finding": {
+      "title": "Key Finding",
+      "highlight": "By 2024, only 0.44 GW of the planned 3.38 GW capacity is operational.",
+      "body": "At the current trajectory, Germany will miss its 10 GW target by 2030 unless urgent action is taken to accelerate implementation.",
+      "implementation_rate_label": "Implementation rate has stalled:"
+    }
   }
 }

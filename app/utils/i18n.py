@@ -8,12 +8,12 @@ DEFAULT_LANG = "en"
 
 @lru_cache(maxsize=None)          # Cache files — don't re-read on every rerun
 def load_translations(lang: str) -> dict:
-    path = Path(f"app/locales/{lang}.json")
+    path = Path(f"locales/{lang}.json")
     if not path.exists():
-        path = Path(f"app/locales/{DEFAULT_LANG}.json")
+        path = Path(f"locales/{DEFAULT_LANG}.json")
     return json.loads(path.read_text(encoding="utf-8"))
 
-def translate(key: str) -> str:
+def tr(key: str) -> str:
     """Translate a dot-notation key, e.g. t('blog.read_more')"""
     lang = st.session_state.get("lang", DEFAULT_LANG)
     translations = load_translations(lang)
