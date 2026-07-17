@@ -8,9 +8,9 @@ DEFAULT_LANG = "en"
 
 @lru_cache(maxsize=None)          # Cache files — don't re-read on every rerun
 def load_translations(lang: str) -> dict:
-    path = Path(f"app/locales/{lang}.json")
+    path = Path(f"app/locals/{lang}.json")
     if not path.exists():
-        path = Path(f"app/locales/{DEFAULT_LANG}.json")
+        path = Path(f"app/locals/{DEFAULT_LANG}.json")
     return json.loads(path.read_text(encoding="utf-8"))
 
 def tr(key: str) -> str:
