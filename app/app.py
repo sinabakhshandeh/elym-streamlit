@@ -227,7 +227,7 @@ fig.add_trace(go.Scatter(
 fig.add_trace(go.Scatter(
     x=years,
     y=[0.01830, 0.09665, 0.24047, 0.38076],
-    name=tr("temporal.capacity_chart.legend implemented"),
+    name=tr("temporal.capacity_chart.legend.implemented"),
 ))
 
 st.plotly_chart(fig)
@@ -255,6 +255,7 @@ fig = go.Figure(data=[go.Bar(
     y=[26.7, 85.7, 64.7, 66.7],
     marker_color=['crimson', 'forestgreen','lightslategray', 'lightslategray']
 )])
+fig.update_xaxes(type='category')
 fig.update_layout(title_text=tr("temporal.implementation_rate_section.chart.title"))
 
 st.plotly_chart(fig)
