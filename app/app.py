@@ -108,16 +108,14 @@ with col3:
         )
 
 # Stats section for projects, products, technologies, and data sources
-cols = st.columns(3)
+cols = st.columns(4)
 with cols[0]:
     st.metric(tr('abstract.stats.projects.label'), "1,238+")
 with cols[1]:
     st.metric(tr('abstract.stats.products.label'), "3")
 with cols[2]:
     st.metric(tr('abstract.stats.technologies.label'), "8")
-
-cols2 = st.columns(3)
-with cols2[0]:
+with cols[3]:
     st.metric(tr('abstract.stats.data_sources.label'), "3")
 
 # Key finding section with highlight and implementation rate
